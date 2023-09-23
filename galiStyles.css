@@ -7,7 +7,7 @@
 
 .navbar
 {
-  background-image: linear-gradient(rgb(222, 187, 221),rgb(234, 199, 129));
+  background-image: linear-gradient(rgb(222, 187, 221),rgb(217, 131, 214));
   /*background: rgb(255, 159, 253);*/
   height: 80px;
   display: flex;
@@ -19,7 +19,7 @@
   z-index: 999;
 }
 
-.navbar-container
+.navbar__container
 {
   display:flex;
   justify-content: space-between;
@@ -31,10 +31,10 @@
   padding: 0 50px;
 }
 
-#navbar-logo
+#navbar__logo
 {
-  background-color: rgb(81, 45, 13);
-  /*background-image: linear-gradient(to top,#371e07,#291a09);*/
+  /*background-color: linear-gradient(45deg, rgb(109, 190, 190), blue);*/
+  background-image: linear-gradient(20deg, rgb(213, 74, 120), blue);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -48,12 +48,12 @@
   font-weight: bold;
 }
 
-.fa-gem
+.lily
 {
   margin-right: 0.5rem;
 }
 
-.navbar-menu
+.navbar__menu
 {
   display: flex;
   align-items: center;
@@ -61,12 +61,12 @@
   text-align: center;
 }
 
-.navbar-item
+.navbar__item
 {
   height: 80px;
 }
 
-.navbar-links
+.navbar__links
 {
   color: #fff;
   display: flex;
@@ -76,13 +76,7 @@
   height: 100%;
 }
 
-.navbar-links:hover
-{
-  color: #f77062;
-  transition: all 0.3s ease;
-}
-
-.navbar-btn{
+.navbar__btn{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,9 +104,16 @@
   transition: all 0.3s ease;
 }
 
+.navbar__links:hover
+{
+  color: rgb(28, 132, 235);
+  transition: all 0.3s ease;
+}
 
-@media screen and (max-width: 960px){
-  .navbar-container{
+
+@media screen and (max-width: 960px)
+{
+  .navbar__container{
       display: flex;
       justify-content: space-between;
       height: 80px;
@@ -122,22 +123,22 @@
       padding: 0;
   }
 
-  .navbar-menu{
+  .navbar__menu{
       display: grid;
       grid-template-columns: auto;
       margin: 0;
       width: 100%;
       position: absolute;
       top: -1000px;
-      opacity: 1;
+      opacity: 0;
       transition: all 0.5s ease;
       height: 50vh;
       z-index: -1;
-      background: #131313;
   }
 
-  .navbar-menu.active{
-      background: #131313;
+  .navbar__menu.active
+  {
+      background: rgb(10, 10, 10);
       top: 100%;
       opacity: 1;
       transition: all 0.5s ease;
@@ -146,11 +147,13 @@
       font-size: 1.6rem;
   }
 
-  #navbar-logo{
+  #navbar__logo
+  {
       padding-left: 25px;
   }
 
-  .navbar-toggle .bar{
+  .navbar__toggle .bar
+  {
       width: 25px;
       height: 3px;
       margin: 5px auto;
@@ -158,30 +161,49 @@
       background: #fff;
   }
 
-  .navbar-item{
+  .navbar__item
+  {
       width: 100%;
   }
 
-  .navbar-links{
+  .navbar__links
+  {
       text-align: center;
       padding: 2rem;
       width: 100%;
       display: table;
   }
 
-  #mobile-menu{
+  #mobile-menu
+  {
       position: absolute;
       top: 20%;
       right: 5%;
       transform: translate(5%, 20%);
   }
 
-  .navbar-toggle .bar{
+  .navbar__btn
+  {
+    padding-bottom: 2rem;
+  }
+
+  .button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      height: 80px;
+      margin: 0;
+  }
+
+
+  .navbar__toggle .bar{
       display: block;
       cursor: pointer;
   }
 
   /*animates*/
+
   #mobile-menu.is-active .bar:nth-child(2){
       opacity: 0;
   }
@@ -197,55 +219,57 @@
 
 .main
 {
-  background-color: rgb(234, 199, 129);
+  background-color: rgb(0, 0, 0);
 }
 
-.main-container{
+.main__container{
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-self: center;
   margin: 0 auto;
   height: 90vh;
-  background-color: rgb(234, 199, 129);
+  background-color: rgb(20, 20, 20);
   z-index: 1;
   width: 100%;
   max-width: 1300px;
   padding: 0 50px;
 }
 
-.main-content h1{
-  font-size: 4rem;
+.main__content h1{
+  font-size: 6rem;
   background-color: #ff8177;
-  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  background-image: linear-gradient(to top, #e608ff 0%, #ffb199 100%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+  font-family: 'Dancing Script', cursive;
 }
 
-.main-content h2{
-  font-size: 4rem;
+.main__content h2{
+  font-size: 1.5rem;
   background-color: #ff8177;
-  background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
+  background-image: linear-gradient(to top, #e4aefd 0%, #93e3f4 100%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+  font-family: 'DM Serif Display', serif;
 }
 
-.main-content p{
+.main__content p{
   margin-top: 1rem;
   font-size: 2rem;
   font-weight: 700;
   color: #fff;
 }
 
-.main-btn{
+.main__btn{
   font-size: 1rem;
-  background-image: linear-gradient(to top, #f77062 0%, #fe5196 
+  background-image: linear-gradient(to top, #ffa79d 0%, #fe5196 
   100%);
   padding: 14px 32px;
   border: none;
@@ -258,45 +282,45 @@
   outline: none;
 }
 
-.main-btn a{
+.main__btn a{
   position: relative;
   z-index: 2;
   color: #fff;
   text-decoration: none;
 }
 
-.main-btn:after{
+.main__btn:after{
   position: absolute;
   content: '';
   top: 0;
   left: 0;
   width: 0;
   height: 100%;
-  background: #4837ff;
+  background: #b1aafc;
   transition: all 0.35s;
   border-radius: 4px;
 }
 
-.main-btn:hover{
+.main__btn:hover{
   color: #fff;
 }
 
-.main-btn:hover:after{
+.main__btn:hover:after{
   width: 100%;
 }
 
-.main-img__container{
+.main__img__container{
   text-align: center;
 }
 
-#main-img{
+#main__img{
   height: 80%;
   width: 80%;
 }
 
-/* Mobile Responsive*/
+/* Mobile Responsive
 @media screen and (max-width: 768px){
-  .main-container{
+  .main__container{
       display: grid;
       grid-template-columns: auto;
       align-items: center;
@@ -306,41 +330,41 @@
       height: 90vh;
   }
 
-  .main-content{
+  .main__content{
       text-align: center;
       margin-bottom: 4rem;
   }
 
-  .main-content h1{
+  .main__content h1{
       font-size: 2.5rem;
       margin-top: 2rem;
   }
 
-  .main-content h2{
+  .main__content h2{
       font-size: 3rem;
   }
 
-  .main-content p{
+  .main__content p{
       margin-top: 1rem;
       font-size: 1.5rem;
   }
 }
 
 @media screen and (max-width: 480px){
-  .main-content h1{
+  .main__content h1{
       font-size: 2rem;
       margin-top: 3rem;
   }
 
-  .main-content p{
+  .main__content p{
       margin-top: 2rem;
       font-size: 1.5rem;
   }
 
-  .main-btn{
+  .main__btn{
       padding: 12px 36px;
       margin: 2.5rem 0;
   }
-}
+}*/
 
 

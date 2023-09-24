@@ -8,7 +8,6 @@
 .navbar
 {
   background-image: linear-gradient(rgb(222, 187, 221),rgb(217, 131, 214));
-  /*background: rgb(255, 159, 253);*/
   height: 80px;
   display: flex;
   justify-content: center;
@@ -106,7 +105,7 @@
 
 .navbar__links:hover
 {
-  color: rgb(28, 132, 235);
+  color: rgb(149, 4, 118);
   transition: all 0.3s ease;
 }
 
@@ -132,19 +131,18 @@
       top: -1000px;
       opacity: 0;
       transition: all 0.5s ease;
-      height: 50vh;
       z-index: -1;
   }
 
   .navbar__menu.active
   {
-      background: rgb(10, 10, 10);
+      background: rgb(77, 43, 68);
       top: 100%;
       opacity: 1;
       transition: all 0.5s ease;
-      z-index: 99;
-      height: 50vh;
-      font-size: 1.6rem;
+      z-index: auto;
+      height: 80vh;
+      font-size: 1.2rem;
   }
 
   #navbar__logo
@@ -180,6 +178,7 @@
       top: 20%;
       right: 5%;
       transform: translate(5%, 20%);
+      
   }
 
   .navbar__btn
@@ -217,9 +216,11 @@
   }
 }
 
+/*Main*/
 .main
 {
-  background-color: rgb(0, 0, 0);
+  background-color: linear-gradient(45deg, #fed9ff, #fffaec);
+  background-image: linear-gradient(45deg, #fed9ff, #fffaec);
 }
 
 .main__container{
@@ -229,7 +230,8 @@
   justify-self: center;
   margin: 0 auto;
   height: 90vh;
-  background-color: rgb(20, 20, 20);
+  background-color: linear-gradient(45deg, #fed9ff, #fffaec);
+  background-image: linear-gradient(45deg, #fed9ff, #fffaec);
   z-index: 1;
   width: 100%;
   max-width: 1300px;
@@ -249,22 +251,15 @@
 }
 
 .main__content h2{
-  font-size: 1.5rem;
-  background-color: #ff8177;
-  background-image: linear-gradient(to top, #e4aefd 0%, #93e3f4 100%);
+  font-size: 1.6rem;
+  background-color: black;
+  background-image: black;
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  font-family: 'DM Serif Display', serif;
-}
-
-.main__content p{
-  margin-top: 1rem;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #fff;
+  font-family: 'Playfair Display', serif;
 }
 
 .main__btn{
@@ -296,7 +291,7 @@
   left: 0;
   width: 0;
   height: 100%;
-  background: #b1aafc;
+  background: rgb(149, 4, 118);
   transition: all 0.35s;
   border-radius: 4px;
 }
@@ -318,7 +313,7 @@
   width: 80%;
 }
 
-/* Mobile Responsive
+/*Mobile Responsive*/
 @media screen and (max-width: 768px){
   .main__container{
       display: grid;
@@ -336,12 +331,12 @@
   }
 
   .main__content h1{
-      font-size: 2.5rem;
+      font-size: 6.5 rem;
       margin-top: 2rem;
   }
 
   .main__content h2{
-      font-size: 3rem;
+      font-size: 2 rem;
   }
 
   .main__content p{
@@ -365,6 +360,6 @@
       padding: 12px 36px;
       margin: 2.5rem 0;
   }
-}*/
+}
 
 

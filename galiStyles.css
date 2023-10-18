@@ -7,7 +7,7 @@
 
 .navbar
 {
-  background-image: linear-gradient(rgb(222, 187, 221),rgb(217, 131, 214));
+  background-image: linear-gradient(rgb(222, 187, 221),#fca9ca);
   height: 80px;
   display: flex;
   justify-content: center;
@@ -219,8 +219,8 @@
 /*Main*/
 .main
 {
-  background-color: linear-gradient(45deg, #fed9ff, #fffaec);
-  background-image: linear-gradient(45deg, #fed9ff, #fffaec);
+  background-color: linear-gradient(45deg, #fff3ff, #fffaec);
+  background-image: linear-gradient(45deg, #fff3ff, #fffaec);
 }
 
 .main__container{
@@ -230,8 +230,8 @@
   justify-self: center;
   margin: 0 auto;
   height: 90vh;
-  background-color: linear-gradient(45deg, #fed9ff, #fffaec);
-  background-image: linear-gradient(45deg, #fed9ff, #fffaec);
+  background-color: linear-gradient(45deg, #fff3ff, #fffaec);
+  background-image: linear-gradient(45deg, #fff3ff, #fffaec);
   z-index: 1;
   width: 100%;
   max-width: 1300px;
@@ -239,15 +239,16 @@
 }
 
 .main__content h1{
-  font-size: 6rem;
+  font-size: 5rem;
   background-color: #ff8177;
-  background-image: linear-gradient(to top, #e608ff 0%, #ffb199 100%);
+  background-image: linear-gradient(to top,#ee4086 0%, #ffb199 100%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Playfair Display', serif;
+  /*font-family: 'Dancing Script', cursive;*/
 }
 
 .main__content h2{
@@ -305,13 +306,24 @@
 }
 
 .main__img__container{
-  text-align: center;
+  text-align:center;
+  
 }
 
 #main__img{
-  height: 80%;
-  width: 80%;
+  height: 70%;
+  width: 70%;
+  vertical-align: middle;
+  transition: box-shadow 0.3s;
 }
+
+#main__img:hover{
+  box-shadow: 8px 8px 10px rgba(0,0,0,0.4);
+  transform: scale(1.075);
+  transition: 0.2s ease-in;
+}
+
+
 
 /*Mobile Responsive*/
 @media screen and (max-width: 768px){
@@ -360,6 +372,101 @@
       padding: 12px 36px;
       margin: 2.5rem 0;
   }
+
+  .main__img__container{
+    text-align: center;
+  }
 }
 
+/* Services Section CSS*/
 
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Asap", sans-serif;
+}
+body{
+  
+  background-color: linear-gradient(45deg, #ffc6ff, #fffaec);
+  background-image: linear-gradient(45deg, #ffc6ff, #fffaec);
+}
+section{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section:nth-child(1){
+  color: #e0ffff;
+  }
+section:nth-child(2){
+  color: #42455a;
+  background: #e0ffff;
+} 
+section:nth-child(3){
+  color: #e0ffff;
+}
+section:nth-child(4){
+  color: #42455a;
+  background: #e0ffff;
+}
+section .container{
+  margin: 100px;
+}
+section h1{
+  font-size: 3rem;
+  margin: 20px;
+}
+section h2{
+  background-color: #ff8177;
+  background-image: linear-gradient(to right, #ff8177 0%,
+  #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, 
+  #b12a5b 100%);
+  background-size: 100%;
+  margin-bottom: 5rem;
+  font-size: 3rem;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-align: center;
+  font-family: 'Playfair Display', serif;  
+}
+section .text-container{
+   display: flex;
+}
+section .text-container .text-box{
+  margin: 20px;
+  padding: 20px;
+  background: #00c2cb;
+}
+section .text-container .text-box h3{
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px){
+  section h1{
+    font-size: 2rem;
+    text-align: center;
+  }
+  section .text-container{
+    flex-direction: column;
+  }
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}

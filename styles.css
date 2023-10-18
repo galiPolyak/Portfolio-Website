@@ -219,8 +219,7 @@
 /*Main*/
 .main
 {
-  background-color: linear-gradient(45deg, #fff3ff, #fffaec);
-  background-image: linear-gradient(45deg, #fff3ff, #fffaec);
+  background: linear-gradient(45deg, #fff3ff, #fffaec);
 }
 
 .main__container{

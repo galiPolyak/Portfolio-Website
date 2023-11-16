@@ -391,20 +391,19 @@
 }
 
 /* Services Section CSS*/
-
-@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
-*{
+#services__container
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Asap", sans-serif;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: bold;
 }
 body{
   
   background-color: linear-gradient(to top,#ffe4db 40%, #fff3ff 50%);
   background-image: linear-gradient(to top,#ffe4db 40%, #fff3ff 50%);
 
-  /*fffaec*/
 }
 section{
   min-height: 100vh;
@@ -412,27 +411,11 @@ section{
   justify-content: center;
   align-items: center;
 }
-section:nth-child(1){
-  color: linear-gradient(to top,#fbc9b9 40%, #fff3ff 50%);
-}
-section:nth-child(2){
-  color: #42455a;
-} 
-section:nth-child(3){
-  color: #e0ffff;
-}
-section:nth-child(4){
-  color: #42455a;
-  background: linear-gradient(to top, #fff3ff 40%, #ffe4db 50%);
-}
+
 section .container{
   margin: 100px;
 }
-section h1{
-  font-size: 5rem;
-  margin: 20px;
-  transform: translate(-50%, -60%);;
-}
+
 section h2{
   font-size: 4rem;
   background-color: #ff8177;
@@ -443,30 +426,76 @@ section h2{
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   font-family: 'Playfair Display', serif;
-  transform: translate(110px,-150px)
+  text-align: center;
 }
 section .text-container{
    display: flex;
 }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
 section .text-container .text-box{
   margin: 20px;
   padding: 20px;
-  background: #00c2cb;
+  height: 400px; /* Adjust the height as needed */
+  width: 300px; /* Adjust the width as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s, transform 0.2s ease-in; /* Combine transitions */
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  padding: 100px 20px 20px 20px;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 10);
 }
+
+section .text-container .text-box:hover {
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.075);
+  animation: pulse 1s forwards; /* Apply the pulse animation on hover */
+}
+
+/* Apply the common class to text boxes */
+section .text-container .text-box:nth-child(1) {
+  background-image: url('images/minesweeperImg1.png');
+  
+}
+
+section .text-container .text-box:nth-child(2) {
+  background-image: url('images/mancalaImg.jpeg');
+}
+
+section .text-container .text-box:nth-child(3) {
+  background-image: url('images/pastaGali.JPEG');
+}
+
 section .text-container .text-box h3{
   font-size: 30px;
-  text-align: center;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
 @media (max-width: 900px){
-  section h1{
-    font-size: 2rem;
-    text-align: center;
-  }
   section .text-container{
     flex-direction: column;
+  }
+  section .text-container .text-box {
+    width: 80%; /* Adjust for smaller screens */
+    height: auto; /* Or set a specific height for smaller screens */
   }
 }
 
@@ -482,50 +511,4 @@ section .text-container .text-box h3{
   opacity: 1;
 }
 
-/* BUBBLE IMAGES */
-
-/*#covax {
-  width: 70%;
- }
- 
- #verto {
-  width: 28%;
- }
- 
- /* F21 IMAGES 
- 
- #js {
-  width: 23%;
- 
- }
- 
- #redux {
-  width: 26%;
- }
- 
- #automate {
-   width: 47%;
-   border: 5px solid #262f3e;
-   border-radius: 20px;
- }
- 
- /* S22 IMAGES \\
- 
- #python {
-   width: 17%;
-   margin-left: 2%;
-   margin-right: 2%;
-  }
- 
-  #pytorch {
-   width: 13%;
-   margin-left: 2%;
-   margin-right: 2%;
-  }
- 
-  #ros {
-    width: 55%;
-    margin-left: 3%;
-    margin-right: 2%;
-  }*/
  

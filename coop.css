@@ -1,10 +1,3 @@
-/*Resume*/
-#myRes{
-  width: 100%;
-  height: 900px;
-  margin-top: 80px;
-}
-
 *{
     box-sizing: border-box;
     margin: 0;
@@ -20,10 +13,9 @@
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    position: fixed;
+    position: sticky;
     top:0;
     z-index: 999;
-    width: 100%;
   }
   
   .navbar__container
@@ -36,7 +28,7 @@
     max-width: 1300px;
     margin: 0 auto;
   }
-
+  
   #navtext__container
   {
     background-color: rgb(255, 255, 255);
@@ -51,6 +43,15 @@
     text-decoration: none;
     font-size: 1.5rem;
     padding-left: 50px;
+    font-family: 'Kumbh Sans', sans-serif;
+  }
+  
+  #navbar__text{
+    font-family: 'Kumbh Sans', sans-serif;
+  }
+  
+  .navbar__logo{
+    font-family: 'Kumbh Sans', sans-serif;
   }
   
   .navbar__menu
@@ -114,17 +115,17 @@
   @media screen and (max-width: 960px)
   {
     .navbar__container{
-        display: flex;
-        justify-content: space-between;
-        height: 80px;
-        z-index: 1;
-        width: 100%;
-        max-width: 1300px;
-        padding: 0;
+      display: flex;
+      justify-content: space-between;
+      height: 80px;
+      z-index: 1;
+      width: 100%;
+      max-width: 1300px;
+      padding: 0;
     }
-
+  
     #navtext__container{
-      padding-left: 50px;
+        padding-left: 50px;
     }
   
     .navbar__menu{
@@ -214,7 +215,136 @@
     #mobile-menu.is-active .bar:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
     }
+  }
+  
+  /*Main*/
+  
+  #main
+  {
+    background: linear-gradient(45deg, #fff3ff, #fffaec);
+    background-image: linear-gradient(45deg, #fff3ff, #fffaec);
+  }
+  
+  #main__container {
+    position: relative;
+    background-color: linear-gradient(45deg, #fff3ff, #fffaec);
+    background-image: linear-gradient(45deg, #fff3ff, #fffaec);
+  
+    justify-self: center;
+  
+    grid-template-columns: 1fr 1fr;
     
   }
-
   
+  #myCanvas {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #main__content{
+    position: absolute;
+    top: 50%;  /* adjust as needed */
+    left: 50%; /* adjust as needed */
+    transform: translate(-50%, -100%);
+    z-index: 10; /* ensures it's above the canvas */
+    /* Additional styling for your text and button */
+    justify-self: center;
+  
+  }
+  
+  #main__content h1{
+    font-size: 4rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top,#ee4086 0%, #ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-family: 'Playfair Display', serif;
+    /*font-family: 'Dancing Script', cursive;*/
+  }
+  
+  #main__content h2{
+    font-size: 1.4rem;
+    background-color: black;
+    background-image: black;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  
+  /*.main__img__container{
+    text-align:center;
+    
+  }
+  
+  #main__img{
+    height: 70%;
+    width: 70%;
+    vertical-align: middle;
+    transition: box-shadow 0.3s;
+  }
+  
+  #main__img:hover{
+    box-shadow: 8px 8px 10px rgba(0,0,0,0.4);
+    transform: scale(1.075);
+    transition: 0.2s ease-in;
+  }*
+  
+  
+  
+  /*Mobile Responsive*/
+  @media screen and (max-width: 768px){
+    #main__container{
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+  
+        background-color: linear-gradient(45deg, #fff3ff, #fffaec);
+    }
+  
+    #main__content{
+        transform: translate(-50%, -60%);
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+  
+    #main__content h1{
+        font-size: 7 rem;
+        margin-top: 2rem;
+    }
+  
+    #main__content h2{
+        font-size: 2 rem;
+    }
+  
+    #main__content p{
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px){
+    #main__content h1{
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+  
+    #main__content p{
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+  
+  
+    #main__img__container{
+      text-align: center;
+    }
+  }
+
+   

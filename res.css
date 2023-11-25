@@ -76,13 +76,6 @@
     height: 100%;
   }
   
-  .navbar__btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1rem;
-    width: 100%;
-  }
   
   .button{
     display: flex;
@@ -97,11 +90,6 @@
     border-radius: 4px;
     background: #f77062;
     color: #fff;
-  }
-  
-  .button:hover{
-    background: #4837ff;
-    transition: all 0.3s ease;
   }
   
   .navbar__links:hover

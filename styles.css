@@ -320,6 +320,10 @@
       margin-top: 3rem;
   }
 
+  #main__content h2{
+    font-size: 1rem;
+  }
+
   #main__content p{
       margin-top: 2rem;
       font-size: 1.5rem;
@@ -515,7 +519,7 @@ section .text__container .box-container:nth-child(3) .text__box {
 
 @media (max-width: 450px){
   section h2{
-    font-size: 2rem;
+    font-size: 1rem;
   }
 
 }

@@ -280,7 +280,7 @@
 }
 
 /*Mobile Responsive*/
-@media screen and (max-width: 768px){
+@media screen and (max-width: 700px){
 
   #main__container{
      
@@ -300,12 +300,13 @@
   }
 
   #main__content h1{
-      font-size: 7 rem;
+      font-size: 6 rem;
       margin-top: 2rem;
+      line-height: 1.2;
   }
 
   #main__content h2{
-      font-size: 2 rem;
+      font-size: 20px;
   }
 
   #main__content p{
@@ -314,22 +315,6 @@
   }
 }
 
-@media screen and (max-width: 480px){
-  #main__content h1{
-      font-size: 2rem;
-      margin-top: 3rem;
-  }
-
-  #main__content p{
-      margin-top: 2rem;
-      font-size: 1.5rem;
-  }
-
-  #main__btn{
-      padding: 12px 36px;
-      margin: 2.5rem 0;
-  }
-}
 
 /* Services Section CSS*/
 #services__container
@@ -373,7 +358,7 @@ section h2{
   -moz-text-fill-color: transparent;
   font-family: 'Playfair Display', serif;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4);
   margin: 30px;
 }
 
@@ -485,19 +470,19 @@ section .text__container .box-container:nth-child(3) .text__box {
 @media (max-width: 990px){
 
   section .text__container .box-container {
-    width: 50vw;
+    width: 60vw;
     max-width:none;
     display: flex;
     justify-content: center;
   }
 
   section .text__container .text__box {
-    width: 50vw; /* Adjust width for small screens */
+    width: 60vw; /* Adjust width for small screens */
     max-width: none; /* Remove max-width on small screens if needed */
   }
 
   section .text__container .description__box {
-    width: 50vw; /* Adjust width for small screens */
+    width: 60vw; /* Adjust width for small screens */
     max-width: none; /* Remove max-width on small screens if needed */
   }
 
@@ -511,6 +496,23 @@ section .text__container .box-container:nth-child(3) .text__box {
     font-size: 3rem;
   }
 
+}
+
+@media (max-width: 480px){
+
+  section .text__container .description__box {
+    height: 200px;
+  }
+
+  section .text__container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section h2{
+    font-size: 3rem;
+  }
 
 }
 

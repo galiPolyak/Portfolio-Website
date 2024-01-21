@@ -166,7 +166,7 @@
     <div class = "contact-box">
       <div class = "contact-left">
         <h3>Send your request.</h3>
-        <form action="https://api.web3forms.com/submit" method="POST">
+        <form id="form" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="1ae33543-cc59-44a4-8f33-d813e165f8b1">
           <div class="input-row">
             <div class="input-group">
@@ -182,7 +182,7 @@
           <div class="input-row">
             <div class="input-group">
               <label> Email</label>
-              <input name = "email" type="text" placeholder="john.smith@gmail.com">
+              <input name = "email" type="email" placeholder="john.smith@gmail.com">
             </div>
             <div class="input-group">
               <label> Subject</label>
@@ -193,6 +193,8 @@
           <label>Message</label>
           <textArea name = "message" rows = "5" placeholder = "Your Message"></textArea> 
           <button type="contact-btn"><a>SEND</a></button>
+
+          <div id="result"></div>
 
         </form>
       </div>

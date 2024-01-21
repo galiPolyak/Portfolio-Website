@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const scrollIcon = document.getElementById("scroll-icon");
+  const scrollIcon = document.getElementById("scroll-icon-Img");
   const servicePage = document.getElementById("services__container");
   const contactIcon = document.getElementById("main__btn");
   const contactPage = document.getElementById("contact-background");

@@ -12,7 +12,6 @@ bubbleImages[0].src = 'images/bubbleImg.png';
 bubbleImages[1].src= 'images/bubbleImg2.png';
 bubbleImages[2].src= 'images/bubbleImg3.png';
 
-
 const canvas = document.getElementById('myCanvas');
 const c = canvas.getContext('2d');
 

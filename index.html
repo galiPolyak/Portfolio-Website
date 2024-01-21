@@ -90,7 +90,10 @@
         <div id="main__content">
             <h1>HELLO, I'M GALI.</h1>
             <h2>I'm a Bachelor of Computing Undergrad @ the University of Guelph!</h2>
-            <button id="main__btn"><a href="/">Contact me!</a></button>
+            <button id="main__btn"><a>Contact me!</a></button>
+            <div class="scroll-icon" id="scroll-icon">
+              <img src="images/scrollIcon.png" alt="Scroll Icon">
+            </div>
         </div>
         <!--<div class="main__img__container">
             <img src="images/pastaGali.JPEG" alt="pic" id="main__img"/>
@@ -104,7 +107,7 @@
         <h2>PERSONAL PROJECTS</h2>
         <div class="text__container">
           <div class="box-container">
-            <button class="text__box" onclick="location.href='https://github.com/galiPolyak?tab=repositories';">
+            <button class="text__box" onclick="location.href='https://github.com/galiPolyak/Minesweeper';">
               <i class="fa">&#xf09b;</i></button>
             <div class="description__box">Minesweeper Game
               <h1>Personal Project</h1>
@@ -114,7 +117,8 @@
             </div>
           </div>
           <div class="box-container">
-            <button class="text__box"><i class="fa">&#xf09b;</i></button>
+            <button class="text__box" onclick="location.href='https://github.com/galiPolyak/MancalaGame';">
+              <i class="fa">&#xf09b;</i></button>
             <div class="description__box"> Java Mancala Master
               <h1>Personal Project</h1>
               <h4>A game offering Kalah and Ayo, built using 
@@ -123,7 +127,8 @@
             </div>
           </div>
           <div class="box-container">
-            <button class="text__box"><i class="fa">&#xf09b;</i></button>
+            <button class="text__box" onclick="location.href='https://github.com/galiPolyak/ListToolEfficiency';">
+              <i class="fa">&#xf09b;</i></button>
             <div class="description__box">List Tool Efficiency
               <h1>Academic Project</h1>
               <h4>Explores the real-world performance of different data structures. Compares them by processing 
@@ -131,7 +136,7 @@
             </div>
           </div>
         </div>
-        <div class="text__container">
+        <!--<div class="text__container">
           <div class="box-container">
             <button class="text__box" onclick="location.href='https://github.com/galiPolyak?tab=repositories';">
               <i class="fa">&#xf09b;</i></button>
@@ -145,10 +150,60 @@
             <button class="text__box"><i class="fa">&#xf09b;</i></button>
             <div class="description__box"></div>
           </div>
-        </div>
+        </div>-->
       </div>
     </div>
   </section>
+
+
+  <!--Contact me section-->
+</section>
+<hr id = "hr-line">
+<div id="contact-background">
+  <div class="contact__container">
+    <h1>CONNECT WITH ME!</h1>
+    <div class = "contact-box">
+      <div class = "contact-left">
+        <h3>Send your request.</h3>
+        <form>
+          <div class="input-row">
+            <div class="input-group">
+              <label> Name</label>
+              <input type="text" placeholder="John Smith">
+            </div>
+            <div class="input-group">
+              <label> Phone</label>
+              <input type="text" placeholder="905-123-4567">
+            </div>
+          </div>
+
+          <div class="input-row">
+            <div class="input-group">
+              <label> Email</label>
+              <input type="text" placeholder="john.smith@gmail.com">
+            </div>
+            <div class="input-group">
+              <label> Subject</label>
+              <input type="text" placeholder="Job Offer &#x263A">
+            </div>
+          </div>
+
+          <label>Message</label>
+          <textArea rows = "5" placeholder = "Your Message"></textArea> 
+          <button id="contact-btn"><a>SEND</a></button>
+
+        </form>
+      </div>
+
+      <div class = "contact-right">
+        <img src="images/rockClimbMe.JPG" id="contact-image">
+      </div>
+    </div>
+  </div>
+<hr id = "hr-line">
+</div>
+</section>
+
 
   <script src = "bubbles.js"></script>
   <script src = "app.js"></script>

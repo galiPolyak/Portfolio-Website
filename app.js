@@ -1,3 +1,23 @@
+document.addEventListener("DOMContentLoaded", function() {
+  const scrollIcon = document.getElementById("scroll-icon");
+  const servicePage = document.getElementById("services__container");
+  const contactIcon = document.getElementById("main__btn");
+  const contactPage = document.getElementById("contact-background");
+
+  scrollIcon.addEventListener("click", function() {
+    scrollToElement(servicePage);
+  });
+
+  contactIcon.addEventListener("click", function() {
+    scrollToElement(contactPage);
+  });
+
+  function scrollToElement(element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+});
+
+
 const menu = document.querySelector('#mobile-menu')
 const menuLinks = document.querySelector('.navbar__menu')
 

@@ -1,4 +1,4 @@
-// SETUP:
+// setup:
 const imageSources = ['images/bubbleImg.png', 'images/bubbleImg2.png', 'images/bubbleImg3.png'];
 
 // Create an array to store the Image objects
@@ -13,12 +13,6 @@ bubbleImages[1].src= 'images/bubbleImg2.png';
 bubbleImages[2].src= 'images/bubbleImg3.png';
 
 
-/*const bubbleImg = new Image();
-const bubbleImg2 = new Image();
-
-bubbleImg.src = 'images/bubbleImg.png'; // Ensure the path to your bubble image is correct
-bubbleImg2.src= 'images/bubbleImg2.png';*/
-
 const canvas = document.getElementById('myCanvas');
 const c = canvas.getContext('2d');
 
@@ -30,13 +24,12 @@ let mouse = {
     y: undefined
 };
 
-// VARIABLES:
 
 let gravity = 0.8;
 let yFriction = 0.75;
 let xFriction = 0.75;
 
-// EVENT LISTENERS:
+
 
 window.addEventListener("mousemove", function(e) {
     mouse.x = e.clientX;
@@ -50,7 +43,7 @@ window.addEventListener("resize", function() {
     // init();
 });
 
-// BUBBLE FUNCTIONS:
+//bubble functions
 
 function Bubble(x, y, velX, velY, radius) {
     this.x = x;
@@ -91,13 +84,13 @@ function Bubble(x, y, velX, velY, radius) {
     };
 }
 
-// HELPER FUNCTIONS:
+//helper functions:
 
 function randomIntInRange(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-// MAIN PROGRAM:
+// main program:
 
 var bubbleArray = [];
 

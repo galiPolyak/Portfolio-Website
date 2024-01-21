@@ -649,7 +649,7 @@ label{
   color: #ee4086;
 }
 
-#contact-btn{
+.contact-left button{
   font-size: 1rem;
   background-image: linear-gradient(to top, #ffb6ad 0%, #fa90bb 
   100%);
@@ -664,14 +664,14 @@ label{
   outline: none;
 }
 
-#contact-btn a{
+.contact-left button a{
   position: relative;
   z-index: 2;
   color: #fff;
   text-decoration: none;
 }
 
-#contact-btn:after{
+.contact-left button:after{
   position: absolute;
   content: '';
   top: 0;
@@ -683,11 +683,11 @@ label{
   border-radius: 4px;
 }
 
-#contact-btn:hover{
+.contact-left button:hover{
   color: #fff;
 }
 
-#contact-btn:hover:after{
+.contact-left button:hover:after{
   width: 100%;
 }
 

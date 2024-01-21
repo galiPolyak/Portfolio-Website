@@ -166,32 +166,33 @@
     <div class = "contact-box">
       <div class = "contact-left">
         <h3>Send your request.</h3>
-        <form>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="1ae33543-cc59-44a4-8f33-d813e165f8b1">
           <div class="input-row">
             <div class="input-group">
               <label> Name</label>
-              <input type="text" placeholder="John Smith">
+              <input name = "text" type="text" placeholder="John Smith">
             </div>
             <div class="input-group">
               <label> Phone</label>
-              <input type="text" placeholder="905-123-4567">
+              <input name = "phone" type="text" placeholder="905-123-4567">
             </div>
           </div>
 
           <div class="input-row">
             <div class="input-group">
               <label> Email</label>
-              <input type="text" placeholder="john.smith@gmail.com">
+              <input name = "email" type="text" placeholder="john.smith@gmail.com">
             </div>
             <div class="input-group">
               <label> Subject</label>
-              <input type="text" placeholder="Job Offer &#x263A">
+              <input name = "subject" type="text" placeholder="Job Offer &#x263A">
             </div>
           </div>
 
           <label>Message</label>
-          <textArea rows = "5" placeholder = "Your Message"></textArea> 
-          <button id="contact-btn"><a>SEND</a></button>
+          <textArea name = "message" rows = "5" placeholder = "Your Message"></textArea> 
+          <button type="contact-btn"><a>SEND</a></button>
 
         </form>
       </div>
@@ -205,8 +206,7 @@
 </div>
 </section>
 
-
-  <script src = "bubbles.js"></script>
-  <script src = "app.js"></script>
+<script src = "bubbles.js"></script>
+<script src = "app.js"></script>
 </body>
 </html>

@@ -1,61 +1,5 @@
-const form = document.getElementById('form');
-const result = document.getElementById('result');
-
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  if (isFormValid()) {
-      const formData = new FormData(form);
-      const object = Object.fromEntries(formData);
-      const json = JSON.stringify(object);
-      result.innerHTML = "Please wait..."
-
-      fetch('https://api.web3forms.com/submit', {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json',
-                  'Accept': 'application/json'
-              },
-              body: json
-          })
-          .then(async (response) => {
-              let json = await response.json();
-              if (response.status == 200) {
-                  result.innerHTML = json.message;
-              } else {
-                  console.log(response);
-                  result.innerHTML = json.message;
-              }
-          })
-          .catch(error => {
-              console.log(error);
-              result.innerHTML = "Something went wrong!";
-          })
-          .then(function() {
-              form.reset();
-              setTimeout(() => {
-                  result.style.display = "none";
-              }, 3000);
-          });
-        }
-    else {
-      result.innerHTML = "Please fill in all form fields.";
-    }
-});
-
-function isFormValid() {
-  // Check if any form field is empty
-  const formInputs = form.querySelectorAll('input, textarea');
-  for (const input of formInputs) {
-      if (input.type !== 'hidden' && input.value.trim() === '') {
-          return false;
-      }
-  }
-  return true;
-}
-
 document.addEventListener("DOMContentLoaded", function() {
-  const scrollIcon = document.getElementById("scroll-icon-Img");
+  const scrollIcon = document.getElementById("scroll-icon");
   const servicePage = document.getElementById("services__container");
   const contactIcon = document.getElementById("main__btn");
   const contactPage = document.getElementById("contact-background");
@@ -156,3 +100,59 @@ window.onload = function() {
   css.innerHTML = ".navbar__logo > .wrap { border-right: 0.08em solid #fff}";
   document.body.appendChild(css);
 };
+
+const form = document.getElementById('form');
+const result = document.getElementById('result');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  if (isFormValid()) {
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+      result.innerHTML = "Please wait..."
+
+      fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
+              },
+              body: json
+          })
+          .then(async (response) => {
+              let json = await response.json();
+              if (response.status == 200) {
+                  result.innerHTML = json.message;
+              } else {
+                  console.log(response);
+                  result.innerHTML = json.message;
+              }
+          })
+          .catch(error => {
+              console.log(error);
+              result.innerHTML = "Something went wrong!";
+          })
+          .then(function() {
+              form.reset();
+              setTimeout(() => {
+                  result.style.display = "none";
+              }, 3000);
+          });
+        }
+    else {
+      result.innerHTML = "Please fill in all form fields.";
+    }
+});
+
+function isFormValid() {
+  // Check if any form field is empty
+  const formInputs = form.querySelectorAll('input, textarea');
+  for (const input of formInputs) {
+      if (input.type !== 'hidden' && input.value.trim() === '') {
+          return false;
+      }
+  }
+  return true;
+}

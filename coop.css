@@ -64,7 +64,7 @@
 
 .navbar__item
 {
-  height: 80px;
+  height: 8vh;
 }
 
 .navbar__links
@@ -104,7 +104,7 @@
     
     display: grid;
     grid-template-columns: auto;
-    width: 30%;
+    width: 25%;
     position: absolute;
     top: -1000px;
     opacity: 0;
@@ -140,10 +140,11 @@
 
   .navbar__links
   {
+    padding-top: 1vh;
     text-align: center;
-    padding: 2rem;
     width: 100%;
     display: table;
+   
   }
 
   #mobile-menu
